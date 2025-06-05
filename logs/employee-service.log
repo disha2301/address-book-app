@@ -1,0 +1,40 @@
+2025-06-05T16:29:51.917+05:30  INFO 10436 --- [main] c.g.a.EmployeePayrollAppApplication      : Starting EmployeePayrollAppApplication using Java 17.0.15 with PID 10436 (C:\Users\disha\IdeaProjects\addressbook-app\target\classes started by disha in C:\Users\disha\IdeaProjects\addressbook-app)
+2025-06-05T16:29:51.920+05:30 DEBUG 10436 --- [main] c.g.a.EmployeePayrollAppApplication      : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-05T16:29:51.922+05:30  INFO 10436 --- [main] c.g.a.EmployeePayrollAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-06-05T16:29:53.067+05:30  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-05T16:29:53.148+05:30  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2025-06-05T16:29:54.048+05:30  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-05T16:29:54.063+05:30  INFO 10436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-05T16:29:54.063+05:30  INFO 10436 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-05T16:29:54.138+05:30  INFO 10436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-05T16:29:54.139+05:30  INFO 10436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2104 ms
+2025-06-05T16:29:54.403+05:30  INFO 10436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-05T16:29:54.480+05:30  INFO 10436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-05T16:29:54.530+05:30  INFO 10436 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-05T16:29:54.894+05:30  INFO 10436 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-05T16:29:54.938+05:30  INFO 10436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-05T16:29:55.156+05:30  INFO 10436 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:addressdb user=SA
+2025-06-05T16:29:55.158+05:30  INFO 10436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-05T16:29:55.187+05:30  WARN 10436 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-05T16:29:55.218+05:30  INFO 10436 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-05T16:29:56.231+05:30  INFO 10436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-05T16:29:56.286+05:30  INFO 10436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T16:29:56.353+05:30  WARN 10436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-05T16:29:57.050+05:30  INFO 10436 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:addressdb'
+2025-06-05T16:29:57.169+05:30  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-05T16:29:57.181+05:30  INFO 10436 --- [main] c.g.a.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 6.131 seconds (process running for 6.71)
+2025-06-05T16:30:20.417+05:30  INFO 10436 --- [http-nio-8081-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-05T16:30:20.417+05:30  INFO 10436 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-05T16:30:20.418+05:30  INFO 10436 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-05T16:32:31.539+05:30  INFO 10436 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-05T16:32:31.681+05:30  INFO 10436 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-05T16:32:31.685+05:30  INFO 10436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T16:32:31.688+05:30  INFO 10436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-05T16:32:31.690+05:30  INFO 10436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
