@@ -61,7 +61,7 @@ The API uses:
 ## 🔧 How to Run
 
 ### Prerequisites:
-- Java 17 or higher
+- Java 17 or any higher version
 - Maven installed
 - IDE like IntelliJ or VS Code (optional)
 
