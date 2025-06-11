@@ -26,37 +26,40 @@ public class AddressController {
         BeanUtils.copyProperties(dto, address);
         return toResponse(addressService.createAddress(userId, address));
     }
-    // PUT - http://localhost:8081/api/addresses/user/1
+
+    // PUT - http://localhost:8081/api/addresses/{id}
     @PutMapping("/{id}")
-    public AddressResponseDTO update(@PathVariable Long id, @Valid @RequestBody AddressRequestDTO dto) {
+    public AddressResponseDTO update(@PathVariable Integer id, @Valid @RequestBody AddressRequestDTO dto) {
         Address updated = new Address();
         BeanUtils.copyProperties(dto, updated);
         return toResponse(addressService.updateAddress(id, updated));
     }
-    // DELETE - http://localhost:8081/api/addresses/user/1
+
+    // DELETE - http://localhost:8081/api/addresses/{id}
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable Integer id) {
         addressService.deleteAddress(id);
     }
-    // GET - http://localhost:8081/api/addresses/sorted/city
-    @GetMapping("/sorted/city")
-    public List<AddressResponseDTO> getSortedByCity() {
-        return addressService.getAllSortedByCity().stream().map(this::toResponse).collect(Collectors.toList());
-    }
-    // GET - http://localhost:8081/api/addresses/sorted/state
-    @GetMapping("/sorted/state")
-    public List<AddressResponseDTO> getSortedByState() {
-        return addressService.getAllSortedByState().stream().map(this::toResponse).collect(Collectors.toList());
+
+    // GET - http://localhost:8081/api/addresses/sorted
+    @GetMapping("/sorted")
+    public List<AddressResponseDTO> getSortedByCityAndState() {
+        return addressService.getAllSortedByCityAndState()
+                .stream()
+                .map(this::toResponse)
+                .collect(Collectors.toList());
     }
 
-    @GetMapping("/search/city")
-    public List<AddressResponseDTO> searchByCity(@RequestParam String city) {
-        return addressService.searchByCity(city).stream().map(this::toResponse).collect(Collectors.toList());
-    }
-
-    @GetMapping("/search/state")
-    public List<AddressResponseDTO> searchByState(@RequestParam String state) {
-        return addressService.searchByState(state).stream().map(this::toResponse).collect(Collectors.toList());
+    // GET - http://localhost:8081/api/addresses/search?city=Chennai&state=TN
+    @GetMapping("/search")
+    public List<AddressResponseDTO> searchByCityOrState(
+            @RequestParam(required = false) String city,
+            @RequestParam(required = false) String state
+    ) {
+        return addressService.searchByCityOrState(city, state)
+                .stream()
+                .map(this::toResponse)
+                .collect(Collectors.toList());
     }
 
     private AddressResponseDTO toResponse(Address address) {
