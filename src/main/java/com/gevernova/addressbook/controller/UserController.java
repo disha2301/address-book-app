@@ -5,8 +5,6 @@ import com.gevernova.addressbook.exceptionhandler.EntryNotFoundException;
 import com.gevernova.addressbook.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.BeanUtils;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,11 +16,10 @@ public class UserController {
 
     private final UserRepository userRepository;
 
-
+    // http://localhost:8081/api/users
     @PostMapping
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
-        User savedUser = userRepository.save(user);
-        return ResponseEntity.ok(savedUser);
+    public User createUser(@Valid @RequestBody User user) {
+        return userRepository.save(user);
     }
 
     // http://localhost:8081/api/users
@@ -31,22 +28,23 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    // http://localhost:8081/api/users/{id}
+    // http://localhost:8081/api/users/1
     @GetMapping("/{id}")
     public User getById(@PathVariable Long id) {
         return userRepository.findById(id)
-                .orElseThrow(() -> new EntryNotFoundException("User not found with ID: " + id));
+                .orElseThrow(() -> new EntryNotFoundException("User not found"));
     }
 
+    // http://localhost:8081/api/users/1
     @PutMapping("/{id}")
     public User updateUser(@PathVariable Long id, @Valid @RequestBody User updatedUser) {
-        User existingUser = userRepository.findById(id)
-                .orElseThrow(() -> new EntryNotFoundException("User not found with ID: " + id));
-
-        BeanUtils.copyProperties(updatedUser, existingUser, "id");
-        return userRepository.save(existingUser);
+        User existing = userRepository.findById(id)
+                .orElseThrow(() -> new EntryNotFoundException("User not found"));
+        updatedUser.setId(existing.getId());
+        return userRepository.save(updatedUser);
     }
 
+    // http://localhost:8081/api/users/1
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);

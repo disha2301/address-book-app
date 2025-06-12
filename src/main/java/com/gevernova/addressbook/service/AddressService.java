@@ -24,22 +24,17 @@ public class AddressService {
         return addressRepository.save(address);
     }
 
-    public Address updateAddress(Integer id, Address updatedAddress) {
-        Address existing = getAddressById(id);
-
-        existing.setStreet1(updatedAddress.getStreet1());
-        existing.setStreet2(updatedAddress.getStreet2());
-        existing.setCity(updatedAddress.getCity());
-        existing.setState(updatedAddress.getState());
-        existing.setCountry(updatedAddress.getCountry());
-        existing.setPincode(updatedAddress.getPincode());
-
-        return addressRepository.save(existing);
+    public Address updateAddress(Long id, Address updatedAddress) {
+        Address existing = addressRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Address not found"));
+        updatedAddress.setId(existing.getId());
+        updatedAddress.setUser(existing.getUser());
+        return addressRepository.save(updatedAddress);
     }
 
-    public void deleteAddress(Integer id) {
+    public void deleteAddress(Long id) {
         if (!addressRepository.existsById(id)) {
-            throw new EntityNotFoundException("Address not found with ID: " + id);
+            throw new EntityNotFoundException("Address not found");
         }
         addressRepository.deleteById(id);
     }
@@ -49,11 +44,6 @@ public class AddressService {
     }
 
     public List<Address> searchByCityOrState(String city, String state) {
-        return addressRepository.findByCityOrState(city, state);
-    }
-
-    public Address getAddressById(Integer id) {
-        return addressRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Address not found with ID: " + id));
+        return addressRepository.searchByCityOrState(city, state);
     }
 }

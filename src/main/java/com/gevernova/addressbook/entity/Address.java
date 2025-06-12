@@ -1,37 +1,32 @@
 package com.gevernova.addressbook.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-@Entity
-@Table(name = "addresses")
-@Data // Generates getters, setters, toString, equals, and hashCode
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "addresses")
 public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    private String street1;
-
+    @NotBlank private String street1;
     private String street2;
 
-    @NotBlank
-    private String city;
+    @NotBlank private String city;
+    @NotBlank private String state;
+    @NotBlank private String country;
+    @NotBlank private String pincode;
 
-    @NotBlank
-    private String state;
-
-    @NotBlank
-    private String country;
-
-    @NotBlank
-    private String pincode;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore // to avoid infinite recursion
     private User user;
 }

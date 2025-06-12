@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AddressRepository extends JpaRepository<Address, Integer> {
+public interface AddressRepository extends JpaRepository<Address, Long> {
 
-    @Query(value = "SELECT * FROM address ORDER BY city, state", nativeQuery = true)
+    @Query(value = "SELECT * FROM addresses ORDER BY city ASC, state ASC", nativeQuery = true)
     List<Address> findAllSortedByCityAndState();
 
-    @Query(value = "SELECT * FROM address WHERE city = ?1 OR state = ?2", nativeQuery = true)
-    List<Address> findByCityOrState(String city, String state);
+    @Query(value = "SELECT * FROM addresses WHERE (:city IS NULL OR city = :city) OR (:state IS NULL OR state = :state)", nativeQuery = true)
+    List<Address> searchByCityOrState(String city, String state);
 }

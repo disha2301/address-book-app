@@ -176,3 +176,93 @@ SELECT * FROM address WHERE city = ? OR state = ? [42102-232]
 2025-06-11T15:46:04.362+05:30  INFO 19868 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-11T15:46:04.364+05:30  INFO 19868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-06-11T15:46:04.367+05:30  INFO 19868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-12T17:20:34.203+05:30  INFO 12076 --- [main] c.g.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.15 with PID 12076 (C:\Users\disha\IdeaProjects\addressbook-app\target\classes started by disha in C:\Users\disha\IdeaProjects\addressbook-app)
+2025-06-12T17:20:34.210+05:30 DEBUG 12076 --- [main] c.g.a.AddressBookAppApplication          : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-12T17:20:34.214+05:30  INFO 12076 --- [main] c.g.a.AddressBookAppApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-12T17:20:36.031+05:30  INFO 12076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-12T17:20:36.248+05:30  INFO 12076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 2 JPA repository interfaces.
+2025-06-12T17:20:37.780+05:30  INFO 12076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-12T17:20:37.814+05:30  INFO 12076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-12T17:20:37.815+05:30  INFO 12076 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12T17:20:37.955+05:30  INFO 12076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-12T17:20:37.956+05:30  INFO 12076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3618 ms
+2025-06-12T17:20:38.461+05:30  INFO 12076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-12T17:20:38.607+05:30  INFO 12076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-12T17:20:38.728+05:30  INFO 12076 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-12T17:20:38.925+05:30  INFO 4912 --- [main] c.g.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.15 with PID 4912 (C:\Users\disha\IdeaProjects\addressbook-app\target\classes started by disha in C:\Users\disha\IdeaProjects\addressbook-app)
+2025-06-12T17:20:38.935+05:30 DEBUG 4912 --- [main] c.g.a.AddressBookAppApplication          : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-12T17:20:38.938+05:30  INFO 4912 --- [main] c.g.a.AddressBookAppApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-12T17:20:39.702+05:30  INFO 12076 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-12T17:20:39.795+05:30  INFO 12076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-12T17:20:40.333+05:30  INFO 12076 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:addressdb user=SA
+2025-06-12T17:20:40.338+05:30  INFO 12076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-12T17:20:40.403+05:30  WARN 12076 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-12T17:20:40.477+05:30  INFO 12076 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-12T17:20:41.483+05:30  INFO 4912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-12T17:20:41.657+05:30  INFO 4912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 2 JPA repository interfaces.
+2025-06-12T17:20:43.008+05:30  INFO 4912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-12T17:20:43.026+05:30  INFO 12076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-12T17:20:43.042+05:30  INFO 4912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-12T17:20:43.043+05:30  INFO 4912 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12T17:20:43.195+05:30  INFO 12076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T17:20:43.213+05:30  INFO 4912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-12T17:20:43.214+05:30  INFO 4912 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4110 ms
+2025-06-12T17:20:43.873+05:30  INFO 4912 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-12T17:20:44.082+05:30  INFO 4912 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-12T17:20:44.159+05:30  INFO 12076 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-12T17:20:44.241+05:30  INFO 4912 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-12T17:20:44.343+05:30  WARN 12076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-12T17:20:45.246+05:30  INFO 4912 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-12T17:20:45.278+05:30  INFO 12076 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:addressdb'
+2025-06-12T17:20:45.344+05:30  INFO 4912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-12T17:20:45.559+05:30  INFO 12076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-12T17:20:45.589+05:30  INFO 12076 --- [main] c.g.a.AddressBookAppApplication          : Started AddressBookAppApplication in 12.769 seconds (process running for 13.658)
+2025-06-12T17:20:45.900+05:30  INFO 4912 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:addressdb user=SA
+2025-06-12T17:20:45.905+05:30  INFO 4912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-12T17:20:45.964+05:30  WARN 4912 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-12T17:20:46.023+05:30  INFO 4912 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-12T17:20:47.678+05:30  INFO 4912 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-12T17:20:47.773+05:30  INFO 4912 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T17:20:48.357+05:30  INFO 4912 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-12T17:20:48.487+05:30  WARN 4912 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-12T17:20:49.092+05:30  INFO 4912 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:addressdb'
+2025-06-12T17:20:49.218+05:30  WARN 4912 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-12T17:20:49.220+05:30  INFO 4912 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T17:20:49.223+05:30  INFO 4912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-12T17:20:49.227+05:30  INFO 4912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-12T17:20:49.250+05:30  INFO 4912 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-12T17:20:49.290+05:30 ERROR 4912 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-06-12T17:21:21.934+05:30  INFO 12076 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-12T17:21:22.141+05:30  INFO 12076 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-12T17:21:22.146+05:30  INFO 12076 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-12T17:21:22.150+05:30  INFO 12076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-12T17:21:22.154+05:30  INFO 12076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
